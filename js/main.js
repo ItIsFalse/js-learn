@@ -198,5 +198,20 @@ while (true) {
     break;
 }
 */
+/*
+// вызов функций из html это старый сейчас используют id
+let but_count = 0;
+function JSButtonPush(element) {
+    but_count++;
+    // alert("nice you pushed the button" + but_count);
+    element.innerHTML = "Кнопка нажата: " + but_count + " раз";
+    // element.style.background = "#333"; до cssText выключаются
+    // element.style.color = "blue" до cssText выключаются
+    element.style.cssText = "border-radius: 5px; border: 0; front-size: 20px; background: #777; color: blue;";
+}
+function JSInput(element) {
+console.log("element1: " + element.value);
+}
+*/
 
 
