@@ -126,4 +126,77 @@ for (let k = 0; k < test3.length; k++) {
     }
 }
 */
-//hi
+/*
+// alert росто инфа с кнопкой ок, if просто показал что работает, prompt может быть любым типом данных, а также при отмене будет NULL, при нажатии ок с пустой строкой будет пустота(узнать ' ' или что там)
+// isNaN() ф-я проверяет на Не число false ->[5, "5", true, false, null] true ->["word", undefined, NAN, "123asd"]
+alert("это сработал alert();");
+
+let got_confirm = confirm("это вопрос из confirm");
+if (got_confirm === true) {
+    console.log("получили из вопроса: " + got_confirm);
+} else console.log("получили из вопроса: " + got_confirm);
+// переменную got_prompt можем создавать прямо внутри если не используем глобально потом
+let got_prompt;
+while (true) {
+    got_prompt = prompt("Вопрос prompt: ", "5");
+    if (got_prompt === null) {
+        console.log("Пользователь отменил ввод");
+        break; // Выход
+    } else if (got_prompt === "") {
+        console.log("Пользователь ничего не ввёл, попробуйте снова");
+    } else {
+        let number = Number(got_prompt);
+        if (!isNaN(number)) {
+            console.log("Вы ввели число:", number);
+            break;
+        } else {
+            console.log("Вы ввели текст:", got_prompt);
+        }
+    }
+}
+
+let person_name = null;
+if(confirm("Начнем?")) {
+    person_name = prompt("Введите ваше имя");
+    alert("Привет " + person_name);
+} else {
+    alert("Вы нажали на отмену");
+}
+*/
+/*
+// function __() {} все также как и всегда
+function get_info(name, age) {
+    console.log("Сработала get_info\nЗдравствуйте " + name + "\nВы родились " + (2026-age) + " году");
+}
+
+while (true) {
+    let name = prompt("Твое имя: ");
+
+    if (name === null) {
+        console.log("Вы отменили ввод");
+        break;
+    } else if (name.trim() === "") {
+        console.log("Имя не может быть пустым");
+        continue;
+    }
+
+    let ageInput = prompt("Сколько тебе лет: ");
+
+    if (ageInput === null) {
+        console.log("Вы отменили ввод");
+        break;
+    }
+
+    let age = Number(ageInput);
+
+    if (isNaN(age) || ageInput.trim() === "") {
+        console.log("Вы ввели не число");
+        continue;
+    }
+
+    get_info(name, age)
+    break;
+}
+*/
+
+
